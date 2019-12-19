@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	setlocale(0, "");
+	
+
+	int dlina = 0; 
+	string line;
+	cout << "Введите строку  : " << endl;
+	getline(cin, line);
+	int mindlina = line.size();
+	int k = 0;
+
+	for (int i = 0; i < line.size(); i++)
+	{
+		if (line[i] == 'а' || line[i] == 'у' || line[i] == 'е' || line[i] == 'ы' || line[i] == 'а ' || line[i] == 'о'
+			|| line[i] == 'э' || line[i] == 'я' || line[i] == 'и' || line[i] == 'ю' || line[i] == 'А' 
+			|| line[i] == 'У' || line[i] == 'Е' || line[i] == 'О' || line[i] == 'Э' || line[i] == 'Я'
+			|| line[i] == 'И' || line[i] == 'Ю')
+		{
+			k++;
+		}
+	}
+	cout << k;
+}
