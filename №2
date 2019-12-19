@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	setlocale(0, "");
+
+	int dlina = 0; 
+	string line;
+	cout << "Введите строку  : " << endl;
+	getline(cin, line);
+	int mindlina = line.size();
+
+	for (int i = 0; i < line.size(); i++)
+	{
+		if (line[i] != ' ')
+		{
+			dlina++;
+		}
+		if (line[i] == ' '|| i==line.size())
+		{
+			if (dlina!=0 && dlina < mindlina)
+			{
+				mindlina = dlina;
+				dlina = 0;
+			}
+		}
+	}
+	cout << mindlina << endl;
+}
